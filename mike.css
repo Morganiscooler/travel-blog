@@ -1,0 +1,18 @@
+#mike {
+    -webkit-animation:
+        mike-float 3.2s infinite;
+    animation: mike-float 3.2s infinite;
+    box-shadow: none;
+    position: fixed;
+    z-index: -100;
+    bottom: 0;
+    left: 0;
+    max-width: 40%;
+    max-height: 40%;
+}
+
+@-webkit-keyframes mike-float {
+    50% {
+        -webkit-transform: rotateZ(5deg) translateY(-5px);
+    }
+}
