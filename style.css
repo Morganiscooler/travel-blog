@@ -253,6 +253,7 @@ span:hover {
     height: 200px;
     width: 100%; /* Changed from fixed width to 100% */
     box-sizing: border-box; /* Ensures padding is included in width */
+    object-fit: contain; /* Ensures whole image is visible */
 }
 
 .grid-preview div {
@@ -269,13 +270,10 @@ span:hover {
     float:left;
 }
 
-.thumbnails {
-    max-width: 60%; /* Adjust this percentage to control image size */
-    max-height: 90%; /* Adjust based on your needs */
-    height: auto; /* Maintain aspect ratio */
-    width: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensures whole image is visible */
-    margin-left: 10px; /* Space between text and image */
+.grid-preview img {
+        max-width: 30vh; /* Adjust this percentage to control image size */
+    max-height: 18vh; /* Adjust based on your needs */
+    
 }
 
 /* Remove the center alignment from body as it's already handled by grid */
@@ -786,10 +784,20 @@ main {
     #title {
         font-size: 10000 !important;
     }
+        .grid-preview img {
+        max-width: 30vh; /* Adjust this percentage to control image size */
+    max-height: 25vh; /* Adjust based on your needs */
+        }
+    
 }
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+        .grid-preview img {
+        max-width: 30vh; /* Adjust this percentage to control image size */
+    max-height: 15vh; /* Adjust based on your needs */
+        }
     /* Mobile responsive adjustments */
     @media (max-width: 768px) {
         /* Previous mobile styles... */
@@ -818,6 +826,8 @@ main {
             min-height: 120px;
             max-height: 80px;
         }
+
+        
     }
 
     /* New class to ensure waves reach credits */
@@ -1048,6 +1058,11 @@ main {
         white-space: normal !important;
         word-wrap: break-word !important;
     }
+
+        .grid-preview img {
+        max-width: 30vh; /* Adjust this percentage to control image size */
+    max-height: 25vh; /* Adjust based on your needs */
+        }
 
     /* Adjust the grid layout for landscape */
     .grid-container {
@@ -1370,12 +1385,17 @@ main {
         /* Changed from bottom right */
     }
 
+
     .island {
         width: 80px;
         height: 24px;
         bottom: -140px;
         right: -65px;
     }
+
+            .grid-preview img{
+            max-height: 100%;
+        }
 }
 
 @media only screen and (max-height: 768px) and (orientation: landscape) {
